@@ -1,0 +1,39 @@
+@import "../variables.less";
+
+.subhead {
+  min-height: 176px;
+  background: @bg-light-color;
+
+  &__title {
+    font-size: 27px;
+    text-align: center;
+    padding-top: 72px;
+  }
+}
+
+@media @tablet-width {
+  .subhead {
+    min-height: 237px;
+    background-image: url(../img/bg_sine_wave_fill.svg);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: auto 24px;
+
+    &__title {
+      font-size: 43px;
+      padding-top: 96px;
+    }
+  }
+}
+
+@media @desktop-width {
+  .subhead {
+    min-height: 271px;
+    background-size: auto 34px;
+
+    &__title {
+      font-size: 53px;
+      padding-top: 96px;
+    }
+  }
+}

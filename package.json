@@ -1,0 +1,29 @@
+{
+  "name": "probation",
+  "version": "1.0.0",
+  "description": "probation in reg.ru",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Romanova Elena",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/helen-eir/helen-eir.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/helen-eir/helen-eir.github.io/issues"
+  },
+  "homepage": "https://github.com/helen-eir/helen-eir.github.io#readme"
+}

@@ -1,0 +1,140 @@
+@import "../variables.less";
+
+
+.form-contact {
+  min-height: 180px;
+  margin-top: 33px;
+
+  &__block {
+    height: 90px;
+    position: relative;
+
+    &_type_input {
+      width: 100%;
+      height: 55px;
+      border-bottom: 2px solid #000;
+      font-size: 17px;
+      line-height: 18px;
+
+      &::-webkit-input-placeholder  {
+        color: @text-color-dark;
+        opacity: 0.3;
+      }
+
+      &::-moz-placeholder {
+        color: @text-color-dark;
+        opacity: 0.3;
+      }
+
+      &:hover{
+        border-color: @text-light-color;
+
+        & + svg {
+          opacity: 1.0;
+          fill: @text-light-color;
+        }
+      }
+
+      &:focus {
+        outline: none;
+        border-color: @text-light-color;
+
+        & + svg {
+          opacity: 1.0;
+          fill: @text-light-color;
+        }
+      }
+    }
+
+    svg {
+      opacity: 0.2;
+      position: absolute;
+      top: 30px;
+      left: 87%;
+
+      &:hover,
+      &:focus {
+        fill: @text-light-color;
+      }
+    }
+  }
+
+  &__e-mail {
+    margin-top: 12px;
+
+    .form-contact__headline::after {
+      width: 68.85%;
+      left: 31.15%;
+    }
+
+    svg {
+    left: 86%;
+    }
+  }
+}
+
+@media @tablet-width {
+  .form-contact {
+    height: 228px;
+    margin-top: 0;
+    padding-top: 69px;
+    background: @bg-light-color;
+
+    &__block {
+      display: flex;
+      flex-direction: row;
+      height: 74px;
+
+      &_type_input {
+        position: relative;
+        top: -21px;
+        width: 501px;
+        height: 55px;//
+        font-size: 19px;
+        background: @bg-light-color;
+      }
+
+      svg {
+        top: -10px;
+        left: 616px;
+      }
+    }
+
+    &__headline {
+      width: 167px;
+    }
+
+    &__e-mail {
+      margin-top: 0px;
+
+      svg {
+      left: 614px;
+      }
+    }
+  }
+}
+
+@media @desktop-width {
+  .form-contact__block {
+    width: 1050px;
+    padding-right: 175px;
+
+    &_type_input {
+      width: 700px;
+      padding-left: 18px;
+    }
+
+    svg {
+      left: 842px;
+    }
+  }
+
+  .form-contact__headline {
+    width: 175px;
+    padding-left: 62px;
+  }
+
+  .form-contact__e-mail svg {
+    left: 839px;
+  }
+}

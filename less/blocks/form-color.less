@@ -1,0 +1,107 @@
+@import "../variables.less";
+
+.form-color__headline {
+  height: 30px;
+}
+
+.form-color__label {
+  position: relative;
+  padding-top: 18px;
+  padding-left: 23.85%;
+  height: 62px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 40px;
+    height: 39px;
+    border: 2px solid #444;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+}
+
+.form-input:checked +
+.form-color__label::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 10px;
+    width: 22px;
+    height: 16px;
+    background: url(../img/icon_tick.svg) no-repeat 50% 50%;
+    background-size: 22px 16px;
+}
+
+@media @tablet-width {
+  .form-color {
+    height: 304px;
+    background: @bg-light-color;
+
+    .form__block {
+      flex-direction: row;
+      height: 265px;
+    }
+
+    &__headline {
+      height: 304px;
+      padding-top: 68px;
+    }
+
+    &__variation {
+      display: flex;
+      flex-flow: row wrap;
+      padding-top: 40px;
+    }
+
+    &__label {
+      padding-top: 24px;
+      padding-left: 82px;
+      width: 250px;
+      height: 65px;
+
+      &::before {
+        top: 9px;
+        left: 0;
+        width: 52px;
+        height: 52px;
+      }
+    }
+  }
+
+  .form-input:checked +
+  .form-color__label::after {
+      top: 24px;
+      width: 33px;
+      height: 22px;
+      background-size: 33px 22px;
+  }
+}
+
+@media @desktop-width {
+  .form-color {
+    height: 228px;
+
+    .form__block {
+      height: 228px;
+    }
+
+    &__headline {
+      height: 228px;
+      padding-top: 68px;
+    }
+
+    &__variation {
+      padding-top: 40px;//
+      padding-right: 89px;///
+      height: 192px;
+    }
+
+    &__label {
+      padding-top: 24px;//
+      width: 262px;
+    }
+  }
+}

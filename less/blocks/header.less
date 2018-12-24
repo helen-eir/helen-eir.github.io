@@ -1,0 +1,379 @@
+@import "../variables.less";
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.new,
+.sale,
+.delivery {
+  display: none;
+}
+
+
+.nav__item {
+  min-height: 79px;
+  border-bottom: 1px solid @border-color-light;
+  padding-top: 27px;
+  z-index: 10;
+  opacity: 0.99;
+
+  &_type_logo {
+    min-height: 80px;
+    border-top: 1px solid @border-color-light;
+    text-align: center;
+    padding-top: 21px;
+  }
+
+  &_type_hidden {
+      position: absolute;
+      top: -300px;
+
+      .nav__link {
+        transform: scaleY(0);
+        transition: none;
+      }
+  }
+}
+
+.nav__link {
+  color: #000;
+
+  svg {
+    position: absolute;
+    margin-top: 3px;
+    left: 10%;
+    opacity: 0.2;
+  }
+
+  span {
+    padding-left: 23.5%;
+  }
+
+  &:hover {
+    opacity: 0.6;
+
+    svg {
+      fill: @fill-light-color;
+      opacity: 1.0;
+    }
+
+    span {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    svg, span {
+      opacity: 0.3;
+    }
+  }
+}
+
+.nav__mobile-menu-button  {
+  position: absolute;
+  top: 32px;
+  right: 10%;
+  border: none;
+
+  &:focus {
+  outline: none;
+  }
+}
+
+.nav__mobile-menu-button_type_close {
+  background: url(/img/icon_menu_open.svg) no-repeat;
+  width: 20px;
+  min-height: 14px;
+}
+
+.nav__mobile-menu-button_type_open {
+  background: url(/img/icon_menu_close.svg) no-repeat;
+  width: 21px;
+  min-height: 21px;
+  top: 28px;
+}
+
+.nav__menu_type_open .nav__link {
+  display: block;
+  transform: scaleY(1);
+  transition: transform .6s ease;
+}
+
+@media @tablet-width {
+  .header {
+    width: 768px;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .nav__item {
+    min-height: 89px;
+    text-align: left;
+
+    &_type_hidden {
+      position: static;
+      top: 0;
+    }
+
+    &_type_logo {
+      flex: 48%;
+      border-top: none;
+      padding-top: 22px;
+      padding-left: 50px;
+    }
+  }
+
+  .nav__mobile-menu-button  {
+    display: none;
+  }
+
+  .catalog {
+    display: block;
+    position: absolute;
+    top: 89px;
+    order: 3;
+    flex: 28%;
+    min-height: 60px;
+    font-size: 15px;
+    line-height: 24px;
+    padding-top: 18px;
+    padding-left: 50px;
+    border-bottom: none;
+    z-index: 30;
+    opacity: 0.99;
+
+    span {
+      padding-left: 0;
+    }
+  }
+
+  .order {
+    display: block;
+    position: absolute;
+    top: 89px;
+    order: 4;
+    flex: 21%;
+    min-height: 60px;
+    font-size: 15px;
+    line-height: 24px;
+    padding-top: 18px;
+    padding-left: 217px;
+    text-align: left;
+    border-bottom: none;
+    z-index: 20;
+    opacity: 0.99;
+
+    span {
+      padding-left: 0;
+    }
+  }
+
+  .search {
+    display: block;
+    order: 1;
+    flex: 10.9%;
+    border-left: 1px solid @border-color-light;
+    border-right: 1px solid @border-color-light;
+
+    svg {
+      position: relative;
+      margin: 0;
+      top: 8px;
+      left: 34px;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  .cart {
+    display: block;
+    order: 2;
+    flex: 40.9%;
+    text-align: right;
+    padding-top: 31px;;
+    padding-right: 50px;;
+
+    svg {
+      position: relative;
+      margin: 0;
+      top: 4px;
+      left: 21px;
+    }
+  }
+
+  .delivery {
+    display: block;
+    position: absolute;
+    top: 89px;
+    order: 5;
+    flex: 50%;
+    min-height: 60px;
+    font-size: 15px;
+    line-height: 24px;
+    padding-top: 18px;
+    padding-left: 494px;
+    font-weight: normal;
+    padding-right: 50px;
+    text-align: right;
+    border-bottom: none;
+  }
+}
+
+@media @desktop-width {
+  .header {
+    width: 1150px;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .nav__item {
+    min-height: 89px;
+    text-align: left;
+
+    &_type_logo {
+      flex: 18.3%;
+      order: 1;
+      border-top: none;
+      padding-top: 9px;
+      padding-left: 32px;
+    }
+  }
+
+  .nav__mobile-menu-button  {
+    display: none;
+  }
+
+
+  .catalog {
+    display: block;
+    position: static;
+    flex: 20.3%;
+    order: 0;
+    font-size: 17px;
+    line-height: 24px;
+    padding-top: 32px;
+    padding-left: 50px;
+    border-right: 1px solid @border-color-light;
+    border-bottom: 1px solid @border-color-light;
+
+    span {
+      padding-left: 0;
+    }
+  }
+
+  .order {
+    display: block;
+    position: static;
+    flex: 20.3%;
+    order: 0;
+    font-size: 17px;
+    line-height: 24px;
+    padding: 32px 0 0 35px;
+    text-align: left;
+    border-bottom: 1px solid @border-color-light;
+
+    span {
+      padding-left: 0;
+    }
+  }
+
+  .search {
+    display: block;
+    flex: 13.3%;
+    order: 2;
+    text-align: right;
+    border-left: none;
+    border-right: 1px solid @border-color-light;
+
+    svg {
+      position: relative;
+      margin: 0;
+      top: 8px;
+      left: -31px;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  .cart {
+    display: block;
+    flex: 27.5%;
+    order: 2;
+    text-align: right;
+    padding-top: 31px;;
+    padding-right: 50px;;
+
+    svg {
+      position: relative;
+      margin: 0;
+      top: 4px;
+      left: 21px;
+    }
+  }
+
+  .new,
+  .sale,
+  .delivery {
+    order: 3;
+  }
+
+  .new {
+    min-height: 60px;
+    display: block;
+    position: absolute;
+    top: 89px;//
+    flex: 23.4%;
+    border: none;
+    padding: 18px 0 0 50px;
+    font-size: 15px;
+    line-height: 24px;
+    opacity: 0.99;
+    z-index: 16;
+  }
+
+  .sale {
+    min-height: 60px;
+    display: block;
+    position: absolute;
+    top: 89px;
+    flex: 23.5%;
+    border: none;
+    padding-top: 18px;
+    padding-left: 270px;
+    font-size: 15px;
+    line-height: 24px;
+    opacity: 0.99;
+    z-index: 15;
+  }
+
+  .delivery {
+    display: block;
+    flex: 53%;
+    min-height: 60px;
+    font-size: 15px;
+    line-height: 24px;
+    padding-top: 18px;
+    padding-left: 876px;
+    font-weight: normal;
+    padding-right: 50px;
+    text-align: right;
+    border-bottom: none;
+  }
+}

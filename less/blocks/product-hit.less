@@ -1,0 +1,194 @@
+@import "../variables.less";
+
+.product-hit {
+  background: url(../img/bg_sine_wave.svg);
+  background-position: bottom;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    padding: 0 9.4%;
+    padding-bottom: 44px;
+    color: @text-color-dark;
+  }
+
+  &__title {
+    margin: 0;
+    padding-top: 27px;
+    text-align: left;
+    color: #000;
+  }
+
+  &__mark {
+    display: block;
+    padding-top: 4px;
+    font-size: 17px;
+    line-height: 20px;
+    color: @fill-light-color;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    padding-top: 23px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  &__table {
+    margin-top: 18px;
+    width: 100%;
+    border-collapse: collapse;
+
+    td {
+      height: 40px;
+      border-bottom: 1px solid @border-color-light;
+    }
+
+    td:first-child {
+      width: 30.6%;
+    }
+
+    td:last-child {
+      width: 50.6%;
+    }
+  }
+
+  &__img {
+    text-align: center;
+    padding-top: 27px;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 19px;
+  }
+
+  &__button {
+    margin-top: 25px;
+  }
+}
+
+@media @tablet-width {
+  .product-hit {
+    background-size: auto 17px;
+
+    &__box {
+      flex-wrap: wrap;
+      width: 668px;
+      height: 627px;
+      padding: 0;
+    }
+
+    &__block {
+      width: 292px;
+    }
+
+    &__title {
+      position: absolute;
+      padding-top: 48px;
+    }
+
+    &__mark {
+      position: relative;
+      top: 55px;
+      left: 565px;
+      line-height: 17px;
+      width: 80px;
+      text-align: center;
+    }
+
+    &__desc {
+      padding-top: 110px;
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    &__table {
+      margin-top: 35px;
+    }
+
+    &__img {
+      position: relative;
+      top: 126px;
+      left: 20px;
+      order: 1;
+      width: 334px;
+    }
+
+    &__price {
+      padding-top: 54px;
+      width: 292px;
+      font-size: 20px;
+    }
+
+    &__button {
+      margin-top: 34px;
+    }
+  }
+}
+
+@media @desktop-width {
+  .product-hit {
+    background: none;
+
+    &__box {
+      width: 1050px;
+      height: 802px;
+      background: url(../img/bg_sine_wave.svg);
+      background-position: bottom;
+      background-size: auto 24px;
+      background-repeat: repeat-x;
+    }
+
+    &__block {
+      margin-left: 175px;
+      padding-top: 84px;
+    }
+
+    &__title {
+      padding-top: 39px;
+      opacity: 0.99;
+      z-index: 5;
+    }
+
+    &__mark {
+      position: relative;
+      top: 50px;
+      left: -133px;
+      line-height: 17px;
+      width: 80px;
+      text-align: center;
+    }
+
+    &__desc {
+      padding-top: 106px;
+    }
+
+    &__table {
+      margin-top: 48px;
+    }
+
+    &__img {
+      top: 50px;
+      left: 29px;
+      width: 525px;
+    }
+
+    &__button {
+      margin-top: 44px;
+    }
+
+    &__price {
+      padding-top: 108px;
+      margin-left: 175px;
+    }
+  }
+}

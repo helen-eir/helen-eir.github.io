@@ -1,0 +1,178 @@
+@import "../variables.less";
+
+.description {
+  width: 100%;
+  height: 488px;
+  background: url(../img/hero_mobile.jpg);
+  background-color: @bg-normal-color;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.99;
+  z-index: 5;
+
+  &__title {
+    text-align: center;
+    padding-top: 71px;
+    font-size: 27px;
+    width: 260px;
+    margin: 0 auto;
+  }
+
+  &__subtitle {
+    position: relative;
+    top: 121px;
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: bold;
+
+    &_item {
+      height: 103px;
+      padding-left: 9.3%;
+      color: #fff;
+
+      span {
+        display: block;
+        width: 120px;
+        padding-top: 27px;
+        color: #fff;
+      }
+
+      svg {
+        position: relative;
+        display: block;
+        left: 76%;
+        opacity: 0.5;
+        fill: #149080;
+      }
+
+      &:first-child {
+        background: @fill-light-color;
+
+        svg {
+          top: -52px;
+        }
+      }
+
+      &:last-child {
+        background: @fill-normal-color;
+
+        svg {
+          top: -55px;
+          left: 72.8%;
+        }
+      }
+
+      &:hover {
+        height: 108px;
+        margin-top: -5px;
+        transition: height 0.6s ease, margin 0.6s ease;///
+
+        svg {
+          opacity: 0.7;
+          transition: opacity 0.3s ease;///
+        }
+      }
+
+      &:active span,
+      &:active svg {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+
+@media @tablet-width {
+  .description {
+    height: 743px;
+    background: url(../img/hero_desktop-tablet.jpg);
+    background-color: @bg-normal-color;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &::after {
+      content: "";
+      background: url(../img/bg_sine_wave_fill.svg) repeat-x;
+      position: relative;
+      top: -15px;
+      display: flex;
+      width: 100%;
+      height: 15px;
+      z-index: 8;
+    }
+
+    &__box {
+      height: 743px;
+    }
+
+    &__title {
+      padding-top: 154px;
+      font-size: 43px;
+      width: auto;
+    }
+
+    &__subtitle {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      top: 372px;
+      font-size: 20px;
+      line-height: 30px;
+
+      &_item {
+        height: 117px;
+        width: 334px;
+        padding-left: 35px;
+
+        span {
+          padding-top: 30px;
+        }
+
+        svg {
+          left: 222px;
+        }
+
+        &:first-child svg {
+          top: -59px;
+        }
+
+        &:last-child svg {
+          top: -59px;
+          left: 205px;
+        }
+
+        &:hover {
+          height: 122px;
+        }
+      }
+    }
+  }
+}
+
+@media @desktop-width {
+  .description__title {
+    font-size: 53px;
+  }
+
+  .description__subtitle {
+    top: 358px;
+  }
+
+  .description__subtitle_item {
+    width: 525px;
+    padding-left: 36px;
+
+    span {
+      padding-top: 29px;
+    }
+
+    svg {
+      left: 412px;
+    }
+
+    &:last-child svg {
+      top: -58px;
+      left: 394px;
+    }
+  }
+}

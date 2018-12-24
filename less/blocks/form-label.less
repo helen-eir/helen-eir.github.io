@@ -1,0 +1,20 @@
+@import "../variables.less";
+
+.form-label {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+  cursor: pointer;
+
+  @media @tablet-width {
+    font-size: 19px;
+  }
+
+  &:hover::before {
+    border-color: @text-light-color;
+  }
+
+  &:active::before {
+    border-color: @border-color__active;
+  }
+}

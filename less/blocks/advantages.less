@@ -1,0 +1,85 @@
+@import "../variables.less";
+
+.advantages {
+  min-height: 829px;
+  padding: 0 9.3%;
+
+  &__title {
+    padding-top: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  &__item {
+    width: 260px;
+    height: 123px;
+    margin: 0 auto;
+
+    &_block {
+      display: flex;
+      align-items: center;
+      height: 38px;
+
+      svg {
+        width: 56px;
+        position: relative;
+        left: -6px;
+      }
+    }
+
+    p {
+      padding-top: 14px;
+      font-size: 17px;
+      line-height: 20px;
+      font-weight: bold;
+    }
+  }
+}
+
+@media @tablet-width {
+  .advantages {
+    width: 668px;
+    min-height: 600px;
+    padding: 0;
+
+    &__title {
+      padding-top: 51px;
+    }
+
+    &__list {
+      flex-wrap: wrap;
+      height: 480px;
+      margin-top: 50px;
+    }
+
+    &__item {
+      width: 334px;
+      height: 155px;
+
+      p {
+        font-size: 20px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+@media @desktop-width {
+  .advantages {
+    padding: 0 175px;
+    padding-top: 62px;
+    width: 1050px;
+
+    &__title {
+      padding-top: 2px; //
+    }
+
+    &__list {
+      margin-top: 47px;
+    }
+  }
+}

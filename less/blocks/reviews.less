@@ -1,0 +1,205 @@
+@import "../variables.less";
+
+.reviews {
+  background: url(../img/bg_sine_wave.svg);
+  background-position: bottom;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+  min-height: 650px;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    padding: 0 9.4%;
+    padding-top: 27px;
+    padding-bottom: 50px;
+    position: relative;//
+  }
+
+  &__button {
+    order: 1;
+    padding-top: 38px;
+
+    &_type_write {
+      width: 100%;
+    }
+  }
+
+  &__slide {
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0);
+    -webkit-transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -o-transition: opacity 2s;
+    transition: opacity 2s;
+
+    span {
+      color: rgba(255, 255, 255, 0);
+    }
+  }
+
+  &__showing {
+    font-size: 15px;
+    line-height: 30px;
+    color: @text-color-dark;
+    padding-top: 23px;
+    position: relative;  //  не возникнет ли конфликтов? Одновременно c position: absolute;
+    opacity: 1;
+    z-index: 2;
+
+    &_author {
+      font-size: 17px;
+      line-height: 28px;
+      padding-top: 56px;
+
+      &_name {
+        font-weight: bold;
+        color: #000;
+      }
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    flex-direction: row;
+    padding-top: 31px;
+    z-index: 10;
+
+    &_type_button {
+      height: 52px;
+      flex: 40.6;
+      border: 1px solid @border-color-light;
+
+      &:first-child {
+        border-right: none;
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+@media @tablet-width {
+  .reviews {
+    background-image: url(../img/review_desktop.jpg), url(../img/bg_sine_wave.svg);
+    background-position: left top, bottom;
+    background-size: auto, auto 17px;
+    background-repeat: no-repeat, repeat-x;
+    min-height: 540px;//
+
+    &__box {
+      flex-flow: row wrap;
+      justify-content: space-between;
+      padding: 0;
+      margin-top: 40px;
+      padding-top: 78px;
+      padding-bottom: 80px;
+      width: 668px;
+    }
+
+    &__title {
+      width: 334px;
+    }
+
+    &__button {
+      order: 0;
+      padding-top: 0px;
+      width: 334px;
+      text-align: right;
+
+      &_type_write {
+        width: 175px;
+      }
+    }
+
+    &__showing {
+      font-size: 17px;
+      padding-top: 45px;
+      width: 668px;
+
+      &_author {
+        font-size: 17px;
+        line-height: 30px;
+        padding-top: 55px;
+
+        span:nth-child(1) {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    &__arrows {
+      position: relative;
+      top: -56px;
+      padding-top: 0px;
+      padding-left: 512px;
+
+      &_type_button {
+        flex: auto;
+        border: none;
+
+        &:first-child {
+          border-right: none;
+          padding-right: 37px;
+        }
+      }
+    }
+  }
+}
+
+@media @desktop-width {
+  .reviews {
+    background: none;
+
+    &__box {
+      background-image: url(../img/review_desktop.jpg), url(../img/bg_sine_wave.svg);
+      background-position: left top, bottom;
+      background-size: auto, auto 24px;
+      background-repeat: no-repeat, repeat-x;
+      margin-top: 67px;
+      padding-top: 71px;
+      padding-bottom: 131px;
+      padding-left: 175px;
+      width: 1050px;
+      min-height: 547px;
+    }
+
+    &__title {
+      width: 525px;
+    }
+
+    &__button {
+      width: 350px;
+      padding-top: 8px;
+    }
+
+    &__showing {
+      padding-top: 52px;
+      width: 875px;
+
+      &_author {
+        padding-top: 0px;
+        position: relative;
+        top: 48px;
+      }
+    }
+
+    &__arrows {
+      top: -24px;
+      padding-left: 719px;
+    }
+  }
+}

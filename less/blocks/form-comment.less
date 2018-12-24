@@ -1,0 +1,136 @@
+@import "../variables.less";
+
+.form-comment {
+  margin-top: 12px;
+  margin-bottom: 55px;
+
+  .form__block {
+    min-height: 296px;
+  }
+
+  &__desc-order {
+    padding-top: 22px;
+
+    &_type_comment {
+      width: 100%;
+      height: 142px;
+      font-size: 17px;
+      line-height: 18px;
+      padding: 15px;
+      border: 2px solid @text-color-dark;
+      cursor: text;
+      color: @text-color-dark;
+
+      &:hover{
+        border-color: @text-light-color;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: @text-light-color;
+      }
+    }
+
+    &_type_comment::-webkit-input-placeholder,
+    &_type_comment::-webkit-input-placeholder {
+      color: @text-color-dark;
+      opacity: 0.3;
+    }
+  }
+
+  &__tagged {
+    padding-top: 12px;
+    font-size: 14px;
+    line-height: 16px;
+    color: @text-color-dark;
+  }
+
+  &__button {
+    order: 1;
+    padding-top: 31px;
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+@media @tablet-width {
+  .form-comment {
+    margin-top: 62px;
+    margin-bottom: 50px;
+
+    .form__block {
+      display: flex;
+      flex-flow: row wrap;
+      min-height: 247px;
+    }
+
+    &__headline {
+      padding-top: 18px;
+    }
+
+    &__desc-order {
+      padding-top: 0px;
+      width: 501px;
+
+      &_type_comment {
+        width: 501px;
+        font-size: 19px;
+      }
+    }
+
+    &__tagged {
+      width: 334px;
+      padding-top: 60px;
+      font-size: 14px;
+      line-height: 16px;
+      color: @text-color-dark;
+      text-align: right;
+    }
+
+    &__button {
+      order: 0;
+      padding-top: 49px;
+      width: 334px;
+
+      .button {
+        width: 230px;
+      }
+    }
+  }
+}
+
+@media @desktop-width {
+  .form-comment {
+    .form__block {
+      min-height: 243px;
+    }
+
+    &__headline {
+    }
+
+    &__desc-order {
+      width: 700px;
+
+      &_type_comment {
+        width: 700px;
+      }
+    }
+
+    &__tagged {
+      width: 350px;
+    }
+
+    &__button {
+      order: 0;
+      padding-top: 45px;
+      padding-left: 175px;
+      width: 525px;
+
+      .button {
+        width: 230px;
+      }
+    }
+  }
+}

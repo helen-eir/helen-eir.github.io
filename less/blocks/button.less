@@ -1,0 +1,27 @@
+@text-color-dark: #444444;
+
+.button {
+  font-size: 17px;
+  line-height: 20px;
+  height: 52px;
+  font-weight: bold;
+  color: @text-color-dark;
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid @text-color-dark;
+
+  &:hover {
+    background: @text-color-dark;
+    color: #fff;
+  }
+
+  &:active {
+    opacity: 0.3;
+    color: fade(#fff, 30%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

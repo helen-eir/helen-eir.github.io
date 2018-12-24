@@ -1,0 +1,24 @@
+@import "../variables.less";
+
+.catalog-list {
+  display: flex;
+  flex-direction: column;
+  margin: 9.3%;
+}
+
+@media @tablet-width  {
+  .catalog-list {
+    width: 668px;
+    margin: 0 auto;
+    margin-top: 68px;
+  }
+}
+
+@media @desktop-width  {
+  .catalog-list {
+    width: 1050px;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 112px;
+  }
+}

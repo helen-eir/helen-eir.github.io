@@ -1,0 +1,141 @@
+@import "../variables.less";
+
+.form-name {
+  margin-top: 20px;
+
+  &__headline {
+    height: 30px;
+  }
+  &__input {
+    height: 54px;
+    border-bottom: 2px solid #000;
+    font-size: 17px;
+    line-height: 10px;
+    color: @text-color-dark;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover{
+      border-color: @text-light-color;
+    }
+
+    &:focus {
+      border-color: @text-light-color;
+    }
+  }
+
+  &__input::-webkit-input-placeholder {
+    color: @text-color-dark;
+    opacity: 0.3;
+  }
+
+  &__input::-moz-placeholder,
+  &__input::-webkit-input-placeholder {
+    color: @text-color-dark;
+    opacity: 0.3;
+  }
+
+  &__label {
+    height: 30px;
+    line-height: 46px;
+  }
+}
+
+
+@media @tablet-width {
+  .form-name {
+    height: 285px;
+
+    .form__block {
+      flex-direction: row;
+      height: 265px;
+    }
+
+    &__headline {
+      padding-top: 40px;
+    }
+
+    &__variation {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-end;
+      align-self: flex-start;//
+    }
+
+    &__label {
+      width: 126px;
+      height: 76px;
+      position: relative;
+      top: 14px;
+
+      &:first-child {
+        width: 73px;
+      }
+    }
+
+    &__input {
+      width: 375px;
+      height: 76px;
+      font-size: 19px;
+      padding-left: 18px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__first-name {
+      width: 426px;
+    }
+  }
+}
+
+@media @desktop-width {
+  .form-name {
+    height: 285px;
+
+    .form__block {
+      flex-direction: row;
+      height: 265px;
+    }
+
+    &__headline {
+      padding-top: 40px;
+    }
+
+    &__variation {
+      width: 700px;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-end;
+      align-self: flex-start;//
+    }
+
+    &__label {
+      width: 126px;
+      height: 76px;
+      position: relative;
+      top: 14px;
+
+      &:first-child {
+        width: 73px;
+      }
+    }
+
+    &__input {
+      width: 574px;
+      height: 76px;
+      font-size: 19px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__first-name {
+      width: 627px;
+    }
+  }
+}
