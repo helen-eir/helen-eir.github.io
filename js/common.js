@@ -24,7 +24,7 @@ $(function () {
 
 
 /* отправка Email */
-
+/*
   $(document).ready(function() {
 
   	$("#form").submit(function() {
@@ -41,6 +41,28 @@ $(function () {
   	});
 
   });
+*/
 
+  /*  Карусель отзывов  */
+
+  var slide = $(".reviews__slide");
+  var currentSlide = 0;
+
+  function nextSlide() {
+    goToSlide(currentSlide+1);
+  }
+
+  function previousSlide() {
+    goToSlide(currentSlide-1);
+  }
+
+  function goToSlide(n) {
+    slide[currentSlide].className = "reviews__slide";
+    currentSlide = (n+slide.length)%slide.length;
+    slide[currentSlide].className = " reviews__showing";
+  }
+
+  $(".right").click(nextSlide);
+  $(".left").click(previousSlide);
 
 });

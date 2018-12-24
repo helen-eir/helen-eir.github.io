@@ -5,6 +5,7 @@
   background-position: bottom;
   background-size: auto 6px;
   background-repeat: repeat-x;
+  min-height: 650px;
 
   &__box {
     display: flex;
@@ -12,6 +13,7 @@
     padding: 0 9.4%;
     padding-top: 27px;
     padding-bottom: 50px;
+    position: relative;//
   }
 
   &__button {
@@ -23,22 +25,39 @@
     }
   }
 
-  &__list {
+  &__slide {
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0);
+    -webkit-transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -o-transition: opacity 2s;
+    transition: opacity 2s;
+
+    span {
+      color: rgba(255, 255, 255, 0);
+    }
+  }
+
+  &__showing {
     font-size: 15px;
     line-height: 30px;
     color: @text-color-dark;
     padding-top: 23px;
-  }
+    position: relative;  //  не возникнет ли конфликтов? Одновременно c position: absolute;
+    opacity: 1;
+    z-index: 2;
 
-  &__author {
-    font-size: 17px;
-    line-height: 28px;
-    color: @text-color-dark;
-    padding-top: 56px;
+    &_author {
+      font-size: 17px;
+      line-height: 28px;
+      padding-top: 56px;
 
-    &_type_name {
-      font-weight: bold;
-      color: #000;
+      &_name {
+        font-weight: bold;
+        color: #000;
+      }
     }
   }
 
@@ -46,6 +65,7 @@
     display: flex;
     flex-direction: row;
     padding-top: 31px;
+    z-index: 10;
 
     &_type_button {
       height: 52px;
@@ -77,6 +97,7 @@
     background-position: left top, bottom;
     background-size: auto, auto 17px;
     background-repeat: no-repeat, repeat-x;
+    min-height: 540px;//
 
     &__box {
       flex-flow: row wrap;
@@ -84,9 +105,8 @@
       padding: 0;
       margin-top: 40px;
       padding-top: 78px;
-      padding-bottom: 131px;
+      padding-bottom: 80px;
       width: 668px;
-      height: 542px;
     }
 
     &__title {
@@ -104,25 +124,28 @@
       }
     }
 
-    &__list {
+    &__showing {
       font-size: 17px;
       padding-top: 45px;
-    }
+      width: 668px;
 
-    &__author {
-      font-size: 17px;
-      line-height: 30px;
-      padding-top: 55px;
+      &_author {
+        font-size: 17px;
+        line-height: 30px;
+        padding-top: 55px;
 
-      &_type_name {
-        font-size: 18px;
-        line-height: 24px;
+        span:nth-child(1) {
+          font-size: 18px;
+          line-height: 24px;
+        }
       }
     }
 
     &__arrows {
-      padding-top: 62px;
-      padding-right: 19px;
+      position: relative;
+      top: -56px;
+      padding-top: 0px;
+      padding-left: 512px;
 
       &_type_button {
         flex: auto;
@@ -151,7 +174,7 @@
       padding-bottom: 131px;
       padding-left: 175px;
       width: 1050px;
-      height: 547px;
+      min-height: 547px;
     }
 
     &__title {
@@ -163,17 +186,20 @@
       padding-top: 8px;
     }
 
-    &__list {
-      padding-top: 26px;
-    }
+    &__showing {
+      padding-top: 52px;
+      width: 875px;
 
-    &__author {
-      padding-top: 18px;
+      &_author {
+        padding-top: 0px;
+        position: relative;
+        top: 48px;
+      }
     }
 
     &__arrows {
-      padding-top: 10px;
-      height: 40px;
+      top: -24px;
+      padding-left: 719px;
     }
   }
 }
